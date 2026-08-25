@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Zeeo Software Market — Digital Storefront</title>
+  <title>Zeeo Software Market — Official Store & Showcase</title>
   
-  <!-- Google Fonts: Inter & Plus Jakarta Sans -->
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -24,7 +24,7 @@
     }
   </script>
 
-  <!-- Font Awesome Icons Pro -->
+  <!-- Font Awesome Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 
   <!-- Midtrans Snap SDK Production -->
@@ -34,15 +34,13 @@
 </head>
 <body class="bg-[#0b0f19] text-slate-100 min-h-screen flex flex-col justify-between font-sans selection:bg-indigo-500 selection:text-white antialiased">
 
-  <!-- Background Decorative Orbs -->
+  <!-- Latar Belakang Dekoratif -->
   <div class="fixed top-0 left-1/2 -translate-x-1/2 w-[800px] h-[350px] bg-gradient-to-tr from-indigo-600/20 via-purple-600/20 to-pink-500/10 blur-[140px] pointer-events-none -z-10 rounded-full"></div>
   <div class="fixed bottom-0 right-0 w-[500px] h-[500px] bg-blue-600/10 blur-[150px] pointer-events-none -z-10 rounded-full"></div>
 
-  <!-- Navbar -->
+  <!-- Header / Navbar -->
   <header class="sticky top-0 z-40 backdrop-blur-md bg-[#0b0f19]/70 border-b border-slate-800/80 transition-all">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
-      
-      <!-- Brand Logo -->
       <a href="#" class="flex items-center gap-3 group">
         <div class="w-10 h-10 bg-gradient-to-tr from-indigo-600 to-violet-500 rounded-xl flex items-center justify-center font-extrabold text-xl text-white shadow-lg shadow-indigo-500/30 group-hover:scale-105 transition-transform duration-300">
           Z
@@ -51,94 +49,204 @@
           <span class="text-xl font-extrabold tracking-tight text-white group-hover:text-indigo-400 transition-colors">
             Zeeo <span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-purple-400">Market</span>
           </span>
-          <span class="text-[10px] text-slate-400 tracking-wider uppercase font-semibold">Official Software Store</span>
+          <span class="text-[10px] text-slate-400 tracking-wider uppercase font-semibold">Software & App Hub</span>
         </div>
       </a>
 
-      <!-- Status Badge -->
       <div class="hidden sm:flex items-center gap-2 bg-slate-900/80 border border-slate-800 px-3.5 py-1.5 rounded-full shadow-inner">
         <span class="relative flex h-2.5 w-2.5">
           <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
           <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500"></span>
         </span>
-        <span class="text-xs font-semibold text-slate-300">Instan Delivery via QRIS</span>
+        <span class="text-xs font-semibold text-slate-300">Google Drive Instant Download</span>
       </div>
     </div>
   </header>
 
-  <!-- Main Hero & Catalog Section -->
-  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-20 flex-grow w-full">
+  <!-- Konten Utama -->
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16 flex-grow w-full">
     
     <!-- Hero Header -->
-    <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+    <div class="text-center max-w-3xl mx-auto mb-12 space-y-4">
       <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-indigo-500/30 bg-indigo-500/10 text-indigo-400 text-xs font-semibold uppercase tracking-wider mb-2">
-        <i class="fa-solid fa-sparkles"></i> Software & Source Code Premium
+        <i class="fa-solid fa-layer-group"></i> Katalog Aplikasi Lengkap
       </div>
-      <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold text-white tracking-tight leading-tight">
-        Solusi Software <br class="hidden sm:inline"/>
-        <span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400">Siap Pakai & Otomatis</span>
+      <h1 class="text-4xl sm:text-5xl font-extrabold text-white tracking-tight leading-tight">
+        Temukan Software & Tools <br/>
+        <span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400">Terbaik Untuk Kebutuhan Anda</span>
       </h1>
-      <p class="text-slate-400 text-base md:text-lg leading-relaxed pt-2">
-        Beli produk digital pilihan Anda. Sistem pembayaran otomatis Midtrans memberikan lisensi & link download Google Drive secara langsung setelah pembayaran.
+      <p class="text-slate-400 text-base leading-relaxed">
+        Jelajahi seluruh koleksi aplikasi buatan kami. Tersedia pilihan gratis untuk langsung diunduh serta aplikasi versi pro berbayar.
       </p>
     </div>
 
-    <!-- Product Grid -->
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+    <!-- Filter Tab & Search Bar -->
+    <div class="flex flex-col sm:flex-row items-center justify-between gap-4 mb-10 bg-slate-900/50 p-2.5 rounded-2xl border border-slate-800/80">
       
-      <!-- Product Card 1 -->
-      <div class="group relative bg-slate-900/60 border border-slate-800 hover:border-indigo-500/50 rounded-3xl p-7 transition-all duration-300 hover:shadow-2xl hover:shadow-indigo-500/10 flex flex-col justify-between backdrop-blur-xl hover:-translate-y-1">
-        
-        <!-- Glowing gradient effect on hover -->
-        <div class="absolute -inset-px rounded-3xl bg-gradient-to-r from-indigo-500 to-purple-500 opacity-0 group-hover:opacity-10 transition-opacity duration-300 pointer-events-none"></div>
+      <!-- Button Filter -->
+      <div class="flex items-center gap-1.5 w-full sm:w-auto overflow-x-auto pb-1 sm:pb-0">
+        <button onclick="filterApp('all')" id="btn-all" class="filter-btn active px-4 py-2 rounded-xl text-xs font-bold transition-all bg-indigo-600 text-white shadow-md">
+          Semua Aplikasi
+        </button>
+        <button onclick="filterApp('paid')" id="btn-paid" class="filter-btn px-4 py-2 rounded-xl text-xs font-bold transition-all text-slate-400 hover:text-white hover:bg-slate-800">
+          <i class="fa-solid fa-tags text-indigo-400 mr-1"></i> Berbayar
+        </button>
+        <button onclick="filterApp('free')" id="btn-free" class="filter-btn px-4 py-2 rounded-xl text-xs font-bold transition-all text-slate-400 hover:text-white hover:bg-slate-800">
+          <i class="fa-solid fa-gift text-emerald-400 mr-1"></i> Gratis
+        </button>
+      </div>
 
+      <!-- Search Box -->
+      <div class="relative w-full sm:w-64">
+        <i class="fa-solid fa-magnifying-glass absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-500 text-xs"></i>
+        <input type="text" id="searchInput" onkeyup="searchApps()" placeholder="Cari nama aplikasi..." 
+               class="w-full bg-slate-950 border border-slate-800 rounded-xl pl-9 pr-4 py-2 text-xs text-slate-200 focus:outline-none focus:border-indigo-500 placeholder:text-slate-600">
+      </div>
+    </div>
+
+    <!-- KATALOG APLIKASI (GRID) -->
+    <div id="appGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      
+      <!-- ================= APLIKASI 1 (BERBAYAR) ================= -->
+      <div class="app-card paid group relative bg-slate-900/60 border border-slate-800 hover:border-indigo-500/50 rounded-3xl p-7 transition-all duration-300 hover:shadow-2xl hover:shadow-indigo-500/10 flex flex-col justify-between backdrop-blur-xl hover:-translate-y-1">
         <div>
-          <!-- Icon Header & Badge -->
           <div class="flex items-center justify-between mb-6">
-            <div class="w-14 h-14 bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 rounded-2xl flex items-center justify-center text-2xl shadow-inner group-hover:scale-110 transition-transform duration-300">
-              <i class="fa-solid fa-layer-group"></i>
+            <div class="w-14 h-14 bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 rounded-2xl flex items-center justify-center text-2xl shadow-inner">
+              <i class="fa-solid fa-cube"></i>
             </div>
-            <span class="text-[11px] font-bold uppercase tracking-wider bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 px-3 py-1 rounded-full">
-              Best Seller
+            <span class="text-[10px] font-bold uppercase tracking-wider bg-indigo-500/10 text-indigo-400 border border-indigo-500/20 px-3 py-1 rounded-full flex items-center gap-1">
+              <i class="fa-solid fa-lock text-[9px]"></i> Premium
             </span>
           </div>
-
-          <!-- Product Details -->
-          <h3 class="text-2xl font-bold text-white mb-2 group-hover:text-indigo-300 transition-colors">
+          <h3 class="app-title text-2xl font-bold text-white mb-2 group-hover:text-indigo-300 transition-colors">
             Zeeo Market Engine v1.0
           </h3>
           <p class="text-slate-400 text-sm leading-relaxed mb-6">
-            Source code lengkap web toko online otomatis terintegrasi pembayaran Midtrans Snap & instant Google Drive download.
+            Source code lengkap sistem toko online otomatis terintegrasi Midtrans Snap & Google Drive download instant.
           </p>
-
-          <!-- Feature List -->
-          <ul class="space-y-2.5 text-xs text-slate-300 mb-8 border-t border-slate-800/80 pt-5">
-            <li class="flex items-center gap-2.5">
-              <i class="fa-solid fa-circle-check text-emerald-400 text-sm"></i> Full Source Code (HTML, CSS, JS)
-            </li>
-            <li class="flex items-center gap-2.5">
-              <i class="fa-solid fa-circle-check text-emerald-400 text-sm"></i> Integrasi Vercel Serverless
-            </li>
-            <li class="flex items-center gap-2.5">
-              <i class="fa-solid fa-circle-check text-emerald-400 text-sm"></i> Otomatis QRIS & Bank Transfer
-            </li>
+          <ul class="space-y-2 text-xs text-slate-300 mb-6 border-t border-slate-800/80 pt-4">
+            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400"></i> Full Source Code (HTML & JS)</li>
+            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400"></i> Backend Serverless Ready</li>
           </ul>
         </div>
-
-        <!-- Price & Action Button -->
         <div class="border-t border-slate-800/80 pt-5">
           <div class="flex items-baseline justify-between mb-4">
-            <span class="text-xs text-slate-400 font-medium">Harga Resmi</span>
+            <span class="text-xs text-slate-400 font-medium">Harga</span>
             <div class="flex items-baseline gap-1">
               <span class="text-xs text-indigo-400 font-semibold">Rp</span>
-              <span class="text-3xl font-extrabold text-white tracking-tight">50.000</span>
+              <span class="text-3xl font-extrabold text-white">50.000</span>
             </div>
           </div>
-
-          <button onclick="buyProduct('Zeeo Market Engine v1.0', 50000)" 
-                  class="w-full bg-gradient-to-r from-indigo-600 to-violet-600 hover:from-indigo-500 hover:to-violet-500 text-white font-bold py-3.5 px-4 rounded-2xl shadow-lg shadow-indigo-600/30 hover:shadow-indigo-600/50 transition-all duration-300 active:scale-[0.98] flex items-center justify-center gap-2 text-sm">
-            <i class="fa-solid fa-bolt-lightning text-amber-300"></i> Beli & Download Instan
+          <button onclick="buyProduct('Zeeo Market Engine v1.0', 50000, 'https://drive.google.com/file/d/LINK_APP_1/view?usp=sharing')" 
+                  class="w-full bg-gradient-to-r from-indigo-600 to-violet-600 hover:from-indigo-500 hover:to-violet-500 text-white font-bold py-3.5 px-4 rounded-2xl shadow-lg shadow-indigo-600/30 transition-all flex items-center justify-center gap-2 text-sm">
+            <i class="fa-solid fa-bolt text-amber-300"></i> Beli Aplikasi Ini
           </button>
+        </div>
+      </div>
+
+      <!-- ================= APLIKASI 2 (GRATIS) ================= -->
+      <div class="app-card free group relative bg-slate-900/60 border border-slate-800 hover:border-emerald-500/50 rounded-3xl p-7 transition-all duration-300 hover:shadow-2xl hover:shadow-emerald-500/10 flex flex-col justify-between backdrop-blur-xl hover:-translate-y-1">
+        <div>
+          <div class="flex items-center justify-between mb-6">
+            <div class="w-14 h-14 bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 rounded-2xl flex items-center justify-center text-2xl shadow-inner">
+              <i class="fa-solid fa-wand-magic-sparkles"></i>
+            </div>
+            <span class="text-[10px] font-bold uppercase tracking-wider bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 px-3 py-1 rounded-full flex items-center gap-1">
+              <i class="fa-solid fa-gift text-[9px]"></i> Free Edition
+            </span>
+          </div>
+          <h3 class="app-title text-2xl font-bold text-white mb-2 group-hover:text-emerald-300 transition-colors">
+            Zeeo Utility Tool (Free)
+          </h3>
+          <p class="text-slate-400 text-sm leading-relaxed mb-6">
+            Aplikasi pembantu ringan untuk optimasi memori PC dan pembersih file sampah (*junk files*) Windows secara otomatis.
+          </p>
+          <ul class="space-y-2 text-xs text-slate-300 mb-6 border-t border-slate-800/80 pt-4">
+            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400"></i> Gratis Tanpa Lisensi</li>
+            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400"></i> Ringan & Tanpa Iklan</li>
+          </ul>
+        </div>
+        <div class="border-t border-slate-800/80 pt-5">
+          <div class="flex items-baseline justify-between mb-4">
+            <span class="text-xs text-slate-400 font-medium">Harga</span>
+            <span class="text-2xl font-extrabold text-emerald-400">GRATIS</span>
+          </div>
+          <!-- Download Langsung tanpa modal checkout -->
+          <a href="https://drive.google.com/file/d/LINK_DRIVE_GRATIS_1/view?usp=sharing" target="_blank"
+             class="w-full bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-3.5 px-4 rounded-2xl shadow-lg shadow-emerald-600/30 transition-all flex items-center justify-center gap-2 text-sm">
+            <i class="fa-solid fa-download"></i> Download Gratis Instan
+          </a>
+        </div>
+      </div>
+
+      <!-- ================= APLIKASI 3 (BERBAYAR) ================= -->
+      <div class="app-card paid group relative bg-slate-900/60 border border-slate-800 hover:border-purple-500/50 rounded-3xl p-7 transition-all duration-300 hover:shadow-2xl hover:shadow-purple-500/10 flex flex-col justify-between backdrop-blur-xl hover:-translate-y-1">
+        <div>
+          <div class="flex items-center justify-between mb-6">
+            <div class="w-14 h-14 bg-purple-500/10 border border-purple-500/20 text-purple-400 rounded-2xl flex items-center justify-center text-2xl shadow-inner">
+              <i class="fa-solid fa-laptop-code"></i>
+            </div>
+            <span class="text-[10px] font-bold uppercase tracking-wider bg-purple-500/10 text-purple-400 border border-purple-500/20 px-3 py-1 rounded-full flex items-center gap-1">
+              <i class="fa-solid fa-lock text-[9px]"></i> Premium
+            </span>
+          </div>
+          <h3 class="app-title text-2xl font-bold text-white mb-2 group-hover:text-purple-300 transition-colors">
+            Aplikasi Kasir Desktop Pro
+          </h3>
+          <p class="text-slate-400 text-sm leading-relaxed mb-6">
+            Software kasir toko & minimarket praktis untuk Windows. Fitur cetak struk, laporan stok, dan data penjualan.
+          </p>
+          <ul class="space-y-2 text-xs text-slate-300 mb-6 border-t border-slate-800/80 pt-4">
+            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400"></i> Format Installer .EXE</li>
+            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400"></i> Lisensi Lifetime Aktivasi</li>
+          </ul>
+        </div>
+        <div class="border-t border-slate-800/80 pt-5">
+          <div class="flex items-baseline justify-between mb-4">
+            <span class="text-xs text-slate-400 font-medium">Harga</span>
+            <div class="flex items-baseline gap-1">
+              <span class="text-xs text-purple-400 font-semibold">Rp</span>
+              <span class="text-3xl font-extrabold text-white">75.000</span>
+            </div>
+          </div>
+          <button onclick="buyProduct('Aplikasi Kasir Desktop Pro', 75000, 'https://drive.google.com/file/d/LINK_APP_2/view?usp=sharing')" 
+                  class="w-full bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-500 hover:to-pink-500 text-white font-bold py-3.5 px-4 rounded-2xl shadow-lg shadow-purple-600/30 transition-all flex items-center justify-center gap-2 text-sm">
+            <i class="fa-solid fa-bolt text-amber-300"></i> Beli Aplikasi Ini
+          </button>
+        </div>
+      </div>
+
+      <!-- ================= APLIKASI 4 (GRATIS) ================= -->
+      <div class="app-card free group relative bg-slate-900/60 border border-slate-800 hover:border-teal-500/50 rounded-3xl p-7 transition-all duration-300 hover:shadow-2xl hover:shadow-teal-500/10 flex flex-col justify-between backdrop-blur-xl hover:-translate-y-1">
+        <div>
+          <div class="flex items-center justify-between mb-6">
+            <div class="w-14 h-14 bg-teal-500/10 border border-teal-500/20 text-teal-400 rounded-2xl flex items-center justify-center text-2xl shadow-inner">
+              <i class="fa-solid fa-file-code"></i>
+            </div>
+            <span class="text-[10px] font-bold uppercase tracking-wider bg-teal-500/10 text-teal-400 border border-teal-500/20 px-3 py-1 rounded-full flex items-center gap-1">
+              <i class="fa-solid fa-gift text-[9px]"></i> Free Edition
+            </span>
+          </div>
+          <h3 class="app-title text-2xl font-bold text-white mb-2 group-hover:text-teal-300 transition-colors">
+            HTML Template Converter (Free)
+          </h3>
+          <p class="text-slate-400 text-sm leading-relaxed mb-6">
+            Script sederhana untuk mengonversi komponen HTML menjadi Tailwind CSS siap pakai secara cepat.
+          </p>
+          <ul class="space-y-2 text-xs text-slate-300 mb-6 border-t border-slate-800/80 pt-4">
+            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400"></i> Open Source Script</li>
+            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400"></i> Bebas Digunakan/Modifikasi</li>
+          </ul>
+        </div>
+        <div class="border-t border-slate-800/80 pt-5">
+          <div class="flex items-baseline justify-between mb-4">
+            <span class="text-xs text-slate-400 font-medium">Harga</span>
+            <span class="text-2xl font-extrabold text-teal-400">GRATIS</span>
+          </div>
+          <a href="https://drive.google.com/file/d/LINK_DRIVE_GRATIS_2/view?usp=sharing" target="_blank"
+             class="w-full bg-teal-600 hover:bg-teal-500 text-white font-bold py-3.5 px-4 rounded-2xl shadow-lg shadow-teal-600/30 transition-all flex items-center justify-center gap-2 text-sm">
+            <i class="fa-solid fa-download"></i> Download Gratis Instan
+          </a>
         </div>
       </div>
 
@@ -146,74 +254,64 @@
   </main>
 
   <!-- Footer -->
-  <footer class="border-t border-slate-800/80 bg-[#070a12]/50 py-8 backdrop-blur-sm">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
+  <footer class="border-t border-slate-800/80 bg-[#070a12]/50 py-8">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
       <p>&copy; 2026 Zeeo Software Market. All rights reserved.</p>
       <div class="flex items-center gap-4 text-slate-400">
-        <span class="flex items-center gap-1.5"><i class="fa-solid fa-shield-halved text-emerald-400"></i> Enkripsi 256-bit</span>
+        <span><i class="fa-solid fa-shield-halved text-emerald-400"></i> Safe Download</span>
         <span>•</span>
-        <span class="flex items-center gap-1.5"><i class="fa-solid fa-credit-card text-indigo-400"></i> Midtrans Secure Payment</span>
+        <span><i class="fa-solid fa-credit-card text-indigo-400"></i> Midtrans Instant Payment</span>
       </div>
     </div>
   </footer>
 
-  <!-- Modal Checkout / Form Pembeli -->
-  <div id="checkoutModal" class="fixed inset-0 bg-slate-950/80 backdrop-blur-md z-50 hidden flex items-center justify-center p-4 transition-all">
-    <div class="bg-slate-900 border border-slate-800 rounded-3xl max-w-md w-full p-6 sm:p-8 shadow-2xl relative overflow-hidden animate-in fade-in zoom-in-95 duration-200">
-      
-      <!-- Close Button -->
-      <button onclick="closeModal()" class="absolute top-5 right-5 text-slate-400 hover:text-white bg-slate-800/50 hover:bg-slate-800 w-8 h-8 rounded-full flex items-center justify-center transition-colors">
+  <!-- Modal Checkout Form (Hanya untuk Aplikasi Berbayar) -->
+  <div id="checkoutModal" class="fixed inset-0 bg-slate-950/80 backdrop-blur-md z-50 hidden flex items-center justify-center p-4">
+    <div class="bg-slate-900 border border-slate-800 rounded-3xl max-w-md w-full p-6 sm:p-8 shadow-2xl relative">
+      <button onclick="closeModal()" class="absolute top-5 right-5 text-slate-400 hover:text-white bg-slate-800/50 w-8 h-8 rounded-full flex items-center justify-center">
         <i class="fa-solid fa-xmark"></i>
       </button>
 
       <div class="mb-6">
-        <span class="text-[10px] font-bold uppercase tracking-wider bg-indigo-500/10 text-indigo-400 border border-indigo-500/20 px-2.5 py-1 rounded-full">Form Checkout</span>
-        <h3 class="text-2xl font-bold text-white mt-2">Detail Pembelian</h3>
+        <span class="text-[10px] font-bold uppercase tracking-wider bg-indigo-500/10 text-indigo-400 border border-indigo-500/20 px-2.5 py-1 rounded-full">Form Pembelian</span>
+        <h3 class="text-2xl font-bold text-white mt-2">Detail Checkout</h3>
         <p class="text-xs text-slate-400 mt-1" id="modalProductName">Produk: -</p>
       </div>
 
       <form id="checkoutForm" onsubmit="handleCheckout(event)" class="space-y-4">
         <div>
           <label class="block text-xs font-semibold text-slate-300 mb-1.5">Nama Lengkap</label>
-          <div class="relative">
-            <i class="fa-solid fa-user absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-500 text-sm"></i>
-            <input type="text" id="custName" required placeholder="Contoh: Budi Santoso"
-                   class="w-full bg-slate-950 border border-slate-800 rounded-xl pl-10 pr-4 py-3 text-white text-sm placeholder-slate-600 focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 transition-all">
-          </div>
+          <input type="text" id="custName" required placeholder="Budi Santoso"
+                 class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-indigo-500">
         </div>
 
         <div>
           <label class="block text-xs font-semibold text-slate-300 mb-1.5">Alamat Email</label>
-          <div class="relative">
-            <i class="fa-solid fa-envelope absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-500 text-sm"></i>
-            <input type="email" id="custEmail" required placeholder="nama@gmail.com"
-                   class="w-full bg-slate-950 border border-slate-800 rounded-xl pl-10 pr-4 py-3 text-white text-sm placeholder-slate-600 focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 transition-all">
-          </div>
+          <input type="email" id="custEmail" required placeholder="nama@gmail.com"
+                 class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-indigo-500">
         </div>
 
         <div>
           <label class="block text-xs font-semibold text-slate-300 mb-1.5">Nomor WhatsApp</label>
-          <div class="relative">
-            <i class="fa-solid fa-phone absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-500 text-sm"></i>
-            <input type="tel" id="custPhone" required placeholder="081234567890"
-                   class="w-full bg-slate-950 border border-slate-800 rounded-xl pl-10 pr-4 py-3 text-white text-sm placeholder-slate-600 focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 transition-all">
-          </div>
+          <input type="tel" id="custPhone" required placeholder="081234567890"
+                 class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-indigo-500">
         </div>
 
         <button type="submit" id="payButton"
-                class="w-full mt-6 bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-500 hover:to-teal-500 text-white font-bold py-3.5 px-4 rounded-xl shadow-lg shadow-emerald-600/30 hover:shadow-emerald-600/50 transition-all flex items-center justify-center gap-2 text-sm">
+                class="w-full mt-6 bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-500 text-white font-bold py-3.5 px-4 rounded-xl shadow-lg flex items-center justify-center gap-2 text-sm">
           <i class="fa-solid fa-lock"></i> Lanjut Ke Pembayaran
         </button>
       </form>
     </div>
   </div>
 
-  <!-- JavaScript Logika Transaksi -->
+  <!-- JavaScript Logika Multi-Kategori & Filter -->
   <script>
-    let selectedProduct = { name: '', price: 0 };
+    let selectedProduct = { name: '', price: 0, driveUrl: '' };
 
-    function buyProduct(name, price) {
-      selectedProduct = { name, price };
+    // Buka Modal Checkout Produk Berbayar
+    function buyProduct(name, price, driveUrl) {
+      selectedProduct = { name, price, driveUrl };
       document.getElementById('modalProductName').innerText = `${name} — Rp ${price.toLocaleString('id-ID')}`;
       document.getElementById('checkoutModal').classList.remove('hidden');
     }
@@ -222,12 +320,57 @@
       document.getElementById('checkoutModal').classList.add('hidden');
     }
 
+    // Filter Kategori (Semua / Berbayar / Gratis)
+    function filterApp(category) {
+      const cards = document.querySelectorAll('.app-card');
+      const buttons = document.querySelectorAll('.filter-btn');
+
+      buttons.forEach(btn => {
+        btn.classList.remove('bg-indigo-600', 'text-white', 'shadow-md');
+        btn.classList.add('text-slate-400');
+      });
+
+      const activeBtn = document.getElementById(`btn-${category}`);
+      if (activeBtn) {
+        activeBtn.classList.add('bg-indigo-600', 'text-white', 'shadow-md');
+        activeBtn.classList.remove('text-slate-400');
+      }
+
+      cards.forEach(card => {
+        if (category === 'all') {
+          card.style.display = 'flex';
+        } else if (category === 'paid' && card.classList.contains('paid')) {
+          card.style.display = 'flex';
+        } else if (category === 'free' && card.classList.contains('free')) {
+          card.style.display = 'flex';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+
+    // Live Search Nama Aplikasi
+    function searchApps() {
+      const query = document.getElementById('searchInput').value.toLowerCase();
+      const cards = document.querySelectorAll('.app-card');
+
+      cards.forEach(card => {
+        const title = card.querySelector('.app-title').innerText.toLowerCase();
+        if (title.includes(query)) {
+          card.style.display = 'flex';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+
+    // Proses Checkout via Backend Vercel -> Midtrans
     async function handleCheckout(event) {
       event.preventDefault();
       
       const payButton = document.getElementById('payButton');
       payButton.disabled = true;
-      payButton.innerHTML = `<i class="fa-solid fa-spinner animate-spin"></i> Memproses Transaksi...`;
+      payButton.innerHTML = `<i class="fa-solid fa-spinner animate-spin"></i> Memproses...`;
 
       const customerDetails = {
         name: document.getElementById('custName').value,
@@ -250,11 +393,11 @@
           closeModal();
           window.snap.pay(data.token, {
             onSuccess: function(result) {
-              alert('Pembayaran Berhasil! Terima kasih telah membeli produk di Zeeo Market.');
-              window.location.href = 'https://drive.google.com'; 
+              alert('Pembayaran Berhasil! Mengalihkan ke halaman download...');
+              window.location.href = selectedProduct.driveUrl; 
             },
             onPending: function(result) {
-              alert('Menunggu pembayaran Anda. Selesaikan instruksi pembayaran pada layar.');
+              alert('Menunggu pembayaran Anda. Selesaikan instruksi di layar.');
             },
             onError: function(result) {
               alert('Pembayaran gagal atau dibatalkan.');
@@ -264,7 +407,7 @@
             }
           });
         } else {
-          alert('Gagal mengambil token transaksi: ' + (data.error || 'Terjadi kesalahan server.'));
+          alert('Gagal mengambil token: ' + (data.error || 'Terjadi kesalahan server.'));
         }
       } catch (err) {
         console.error(err);
