@@ -16,9 +16,7 @@
     tailwind.config = {
       theme: {
         extend: {
-          fontFamily: {
-            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
-          },
+          fontFamily: { sans: ['"Plus Jakarta Sans"', 'sans-serif'] }
         }
       }
     }
@@ -34,7 +32,7 @@
 </head>
 <body class="bg-[#0b0f19] text-slate-100 min-h-screen flex flex-col justify-between font-sans selection:bg-indigo-500 selection:text-white antialiased">
 
-  <!-- Latar Belakang Dekoratif -->
+  <!-- Background Decorative Blurs -->
   <div class="fixed top-0 left-1/2 -translate-x-1/2 w-[800px] h-[350px] bg-gradient-to-tr from-indigo-600/20 via-purple-600/20 to-pink-500/10 blur-[140px] pointer-events-none -z-10 rounded-full"></div>
   <div class="fixed bottom-0 right-0 w-[500px] h-[500px] bg-blue-600/10 blur-[150px] pointer-events-none -z-10 rounded-full"></div>
 
@@ -63,7 +61,7 @@
     </div>
   </header>
 
-  <!-- Konten Utama -->
+  <!-- Main Content -->
   <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16 flex-grow w-full">
     
     <!-- Hero Header -->
@@ -82,8 +80,6 @@
 
     <!-- Filter Tab & Search Bar -->
     <div class="flex flex-col sm:flex-row items-center justify-between gap-4 mb-10 bg-slate-900/50 p-2.5 rounded-2xl border border-slate-800/80">
-      
-      <!-- Button Filter -->
       <div class="flex items-center gap-1.5 w-full sm:w-auto overflow-x-auto pb-1 sm:pb-0">
         <button onclick="filterApp('all')" id="btn-all" class="filter-btn active px-4 py-2 rounded-xl text-xs font-bold transition-all bg-indigo-600 text-white shadow-md">
           Semua Aplikasi
@@ -96,7 +92,6 @@
         </button>
       </div>
 
-      <!-- Search Box -->
       <div class="relative w-full sm:w-64">
         <i class="fa-solid fa-magnifying-glass absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-500 text-xs"></i>
         <input type="text" id="searchInput" onkeyup="searchApps()" placeholder="Cari nama aplikasi..." 
@@ -104,153 +99,8 @@
       </div>
     </div>
 
-    <!-- KATALOG APLIKASI (GRID) -->
-    <div id="appGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-      
-      <!-- ================= APLIKASI 1 (BERBAYAR) ================= -->
-      <div class="app-card paid group relative bg-slate-900/60 border border-slate-800 hover:border-indigo-500/50 rounded-3xl p-7 transition-all duration-300 hover:shadow-2xl hover:shadow-indigo-500/10 flex flex-col justify-between backdrop-blur-xl hover:-translate-y-1">
-        <div>
-          <div class="flex items-center justify-between mb-6">
-            <div class="w-14 h-14 bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 rounded-2xl flex items-center justify-center text-2xl shadow-inner">
-              <i class="fa-solid fa-cube"></i>
-            </div>
-            <span class="text-[10px] font-bold uppercase tracking-wider bg-indigo-500/10 text-indigo-400 border border-indigo-500/20 px-3 py-1 rounded-full flex items-center gap-1">
-              <i class="fa-solid fa-lock text-[9px]"></i> Premium
-            </span>
-          </div>
-          <h3 class="app-title text-2xl font-bold text-white mb-2 group-hover:text-indigo-300 transition-colors">
-            Zeeo Market Engine v1.0
-          </h3>
-          <p class="text-slate-400 text-sm leading-relaxed mb-6">
-            Source code lengkap sistem toko online otomatis terintegrasi Midtrans Snap & Google Drive download instant.
-          </p>
-          <ul class="space-y-2 text-xs text-slate-300 mb-6 border-t border-slate-800/80 pt-4">
-            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400"></i> Full Source Code (HTML & JS)</li>
-            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400"></i> Backend Serverless Ready</li>
-          </ul>
-        </div>
-        <div class="border-t border-slate-800/80 pt-5">
-          <div class="flex items-baseline justify-between mb-4">
-            <span class="text-xs text-slate-400 font-medium">Harga</span>
-            <div class="flex items-baseline gap-1">
-              <span class="text-xs text-indigo-400 font-semibold">Rp</span>
-              <span class="text-3xl font-extrabold text-white">50.000</span>
-            </div>
-          </div>
-          <button onclick="buyProduct('Zeeo Market Engine v1.0', 50000, 'https://drive.google.com/file/d/LINK_APP_1/view?usp=sharing')" 
-                  class="w-full bg-gradient-to-r from-indigo-600 to-violet-600 hover:from-indigo-500 hover:to-violet-500 text-white font-bold py-3.5 px-4 rounded-2xl shadow-lg shadow-indigo-600/30 transition-all flex items-center justify-center gap-2 text-sm">
-            <i class="fa-solid fa-bolt text-amber-300"></i> Beli Aplikasi Ini
-          </button>
-        </div>
-      </div>
-
-      <!-- ================= APLIKASI 2 (GRATIS) ================= -->
-      <div class="app-card free group relative bg-slate-900/60 border border-slate-800 hover:border-emerald-500/50 rounded-3xl p-7 transition-all duration-300 hover:shadow-2xl hover:shadow-emerald-500/10 flex flex-col justify-between backdrop-blur-xl hover:-translate-y-1">
-        <div>
-          <div class="flex items-center justify-between mb-6">
-            <div class="w-14 h-14 bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 rounded-2xl flex items-center justify-center text-2xl shadow-inner">
-              <i class="fa-solid fa-wand-magic-sparkles"></i>
-            </div>
-            <span class="text-[10px] font-bold uppercase tracking-wider bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 px-3 py-1 rounded-full flex items-center gap-1">
-              <i class="fa-solid fa-gift text-[9px]"></i> Free Edition
-            </span>
-          </div>
-          <h3 class="app-title text-2xl font-bold text-white mb-2 group-hover:text-emerald-300 transition-colors">
-            Zeeo Utility Tool (Free)
-          </h3>
-          <p class="text-slate-400 text-sm leading-relaxed mb-6">
-            Aplikasi pembantu ringan untuk optimasi memori PC dan pembersih file sampah (*junk files*) Windows secara otomatis.
-          </p>
-          <ul class="space-y-2 text-xs text-slate-300 mb-6 border-t border-slate-800/80 pt-4">
-            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400"></i> Gratis Tanpa Lisensi</li>
-            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400"></i> Ringan & Tanpa Iklan</li>
-          </ul>
-        </div>
-        <div class="border-t border-slate-800/80 pt-5">
-          <div class="flex items-baseline justify-between mb-4">
-            <span class="text-xs text-slate-400 font-medium">Harga</span>
-            <span class="text-2xl font-extrabold text-emerald-400">GRATIS</span>
-          </div>
-          <!-- Download Langsung tanpa modal checkout -->
-          <a href="https://drive.google.com/file/d/LINK_DRIVE_GRATIS_1/view?usp=sharing" target="_blank"
-             class="w-full bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-3.5 px-4 rounded-2xl shadow-lg shadow-emerald-600/30 transition-all flex items-center justify-center gap-2 text-sm">
-            <i class="fa-solid fa-download"></i> Download Gratis Instan
-          </a>
-        </div>
-      </div>
-
-      <!-- ================= APLIKASI 3 (BERBAYAR) ================= -->
-      <div class="app-card paid group relative bg-slate-900/60 border border-slate-800 hover:border-purple-500/50 rounded-3xl p-7 transition-all duration-300 hover:shadow-2xl hover:shadow-purple-500/10 flex flex-col justify-between backdrop-blur-xl hover:-translate-y-1">
-        <div>
-          <div class="flex items-center justify-between mb-6">
-            <div class="w-14 h-14 bg-purple-500/10 border border-purple-500/20 text-purple-400 rounded-2xl flex items-center justify-center text-2xl shadow-inner">
-              <i class="fa-solid fa-laptop-code"></i>
-            </div>
-            <span class="text-[10px] font-bold uppercase tracking-wider bg-purple-500/10 text-purple-400 border border-purple-500/20 px-3 py-1 rounded-full flex items-center gap-1">
-              <i class="fa-solid fa-lock text-[9px]"></i> Premium
-            </span>
-          </div>
-          <h3 class="app-title text-2xl font-bold text-white mb-2 group-hover:text-purple-300 transition-colors">
-            Aplikasi Kasir Desktop Pro
-          </h3>
-          <p class="text-slate-400 text-sm leading-relaxed mb-6">
-            Software kasir toko & minimarket praktis untuk Windows. Fitur cetak struk, laporan stok, dan data penjualan.
-          </p>
-          <ul class="space-y-2 text-xs text-slate-300 mb-6 border-t border-slate-800/80 pt-4">
-            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400"></i> Format Installer .EXE</li>
-            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400"></i> Lisensi Lifetime Aktivasi</li>
-          </ul>
-        </div>
-        <div class="border-t border-slate-800/80 pt-5">
-          <div class="flex items-baseline justify-between mb-4">
-            <span class="text-xs text-slate-400 font-medium">Harga</span>
-            <div class="flex items-baseline gap-1">
-              <span class="text-xs text-purple-400 font-semibold">Rp</span>
-              <span class="text-3xl font-extrabold text-white">75.000</span>
-            </div>
-          </div>
-          <button onclick="buyProduct('Aplikasi Kasir Desktop Pro', 75000, 'https://drive.google.com/file/d/LINK_APP_2/view?usp=sharing')" 
-                  class="w-full bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-500 hover:to-pink-500 text-white font-bold py-3.5 px-4 rounded-2xl shadow-lg shadow-purple-600/30 transition-all flex items-center justify-center gap-2 text-sm">
-            <i class="fa-solid fa-bolt text-amber-300"></i> Beli Aplikasi Ini
-          </button>
-        </div>
-      </div>
-
-      <!-- ================= APLIKASI 4 (GRATIS) ================= -->
-      <div class="app-card free group relative bg-slate-900/60 border border-slate-800 hover:border-teal-500/50 rounded-3xl p-7 transition-all duration-300 hover:shadow-2xl hover:shadow-teal-500/10 flex flex-col justify-between backdrop-blur-xl hover:-translate-y-1">
-        <div>
-          <div class="flex items-center justify-between mb-6">
-            <div class="w-14 h-14 bg-teal-500/10 border border-teal-500/20 text-teal-400 rounded-2xl flex items-center justify-center text-2xl shadow-inner">
-              <i class="fa-solid fa-file-code"></i>
-            </div>
-            <span class="text-[10px] font-bold uppercase tracking-wider bg-teal-500/10 text-teal-400 border border-teal-500/20 px-3 py-1 rounded-full flex items-center gap-1">
-              <i class="fa-solid fa-gift text-[9px]"></i> Free Edition
-            </span>
-          </div>
-          <h3 class="app-title text-2xl font-bold text-white mb-2 group-hover:text-teal-300 transition-colors">
-            HTML Template Converter (Free)
-          </h3>
-          <p class="text-slate-400 text-sm leading-relaxed mb-6">
-            Script sederhana untuk mengonversi komponen HTML menjadi Tailwind CSS siap pakai secara cepat.
-          </p>
-          <ul class="space-y-2 text-xs text-slate-300 mb-6 border-t border-slate-800/80 pt-4">
-            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400"></i> Open Source Script</li>
-            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400"></i> Bebas Digunakan/Modifikasi</li>
-          </ul>
-        </div>
-        <div class="border-t border-slate-800/80 pt-5">
-          <div class="flex items-baseline justify-between mb-4">
-            <span class="text-xs text-slate-400 font-medium">Harga</span>
-            <span class="text-2xl font-extrabold text-teal-400">GRATIS</span>
-          </div>
-          <a href="https://drive.google.com/file/d/LINK_DRIVE_GRATIS_2/view?usp=sharing" target="_blank"
-             class="w-full bg-teal-600 hover:bg-teal-500 text-white font-bold py-3.5 px-4 rounded-2xl shadow-lg shadow-teal-600/30 transition-all flex items-center justify-center gap-2 text-sm">
-            <i class="fa-solid fa-download"></i> Download Gratis Instan
-          </a>
-        </div>
-      </div>
-
-    </div>
+    <!-- WADAH OTOMATIS KATALOG APLIKASI -->
+    <div id="appGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
   </main>
 
   <!-- Footer -->
@@ -265,7 +115,7 @@
     </div>
   </footer>
 
-  <!-- Modal Checkout Form (Hanya untuk Aplikasi Berbayar) -->
+  <!-- Modal Checkout Form -->
   <div id="checkoutModal" class="fixed inset-0 bg-slate-950/80 backdrop-blur-md z-50 hidden flex items-center justify-center p-4">
     <div class="bg-slate-900 border border-slate-800 rounded-3xl max-w-md w-full p-6 sm:p-8 shadow-2xl relative">
       <button onclick="closeModal()" class="absolute top-5 right-5 text-slate-400 hover:text-white bg-slate-800/50 w-8 h-8 rounded-full flex items-center justify-center">
@@ -305,11 +155,131 @@
     </div>
   </div>
 
-  <!-- JavaScript Logika Multi-Kategori & Filter -->
+  <!-- JAVASCRIPT: DATA APLIKASI & LOGIKA WEB -->
   <script>
+    /* 
+    ========================================================================
+    TEMPAT MENGISI & MENAMBAH APLIKASI ANDA (DAFTAR PRODUK)
+    ========================================================================
+    - Untuk aplikasi BERBAYAR: isian type: 'paid', tentukan harga & driveUrl.
+    - Untuk aplikasi GRATIS  : isian type: 'free', set harga: 0, tentukan driveUrl.
+    - icon: Nama icon dari FontAwesome (contoh: fa-cube, fa-laptop-code, fa-wand-magic-sparkles, fa-mobile-screen).
+    */
+
+    const daftarAplikasi = [
+      {
+        id: 1,
+        nama: "Zeeo Market Engine v1.0",
+        type: "paid", // 'paid' atau 'free'
+        harga: 50000,
+        icon: "fa-cube",
+        deskripsi: "Source code lengkap sistem toko online otomatis terintegrasi Midtrans Snap & Google Drive download instant.",
+        fitur: ["Full Source Code (HTML & JS)", "Backend Serverless Ready"],
+        driveUrl: "https://drive.google.com/file/d/LINK_GOOGLE_DRIVE_BERBAYAR_1/view?usp=sharing"
+      },
+      {
+        id: 2,
+        nama: "Zeeo Utility Tool",
+        type: "free",
+        harga: 0,
+        icon: "fa-wand-magic-sparkles",
+        deskripsi: "Aplikasi pembantu ringan untuk optimasi memori PC dan pembersih file sampah Windows secara otomatis.",
+        fitur: ["Gratis Tanpa Lisensi", "Ringan & Tanpa Iklan"],
+        driveUrl: "https://drive.google.com/file/d/LINK_GOOGLE_DRIVE_GRATIS_1/view?usp=sharing"
+      },
+      {
+        id: 3,
+        nama: "Aplikasi Kasir Desktop Pro",
+        type: "paid",
+        harga: 75000,
+        icon: "fa-laptop-code",
+        deskripsi: "Software kasir toko & minimarket praktis untuk Windows. Fitur cetak struk, laporan stok, dan data penjualan.",
+        fitur: ["Format Installer .EXE", "Lisensi Lifetime Aktivasi"],
+        driveUrl: "https://drive.google.com/file/d/LINK_GOOGLE_DRIVE_BERBAYAR_2/view?usp=sharing"
+      },
+      {
+        id: 4,
+        nama: "HTML Template Converter",
+        type: "free",
+        harga: 0,
+        icon: "fa-file-code",
+        deskripsi: "Script sederhana untuk mengonversi komponen HTML menjadi Tailwind CSS siap pakai secara cepat.",
+        fitur: ["Open Source Script", "Bebas Digunakan/Modifikasi"],
+        driveUrl: "https://drive.google.com/file/d/LINK_GOOGLE_DRIVE_GRATIS_2/view?usp=sharing"
+      }
+    ];
+
+    // ========================================================================
+    // LOGIKA RENDER OTOMATIS KE LAYAR (JANGAN DIUBAH KECUALI PAHAM JAVASCRIPT)
+    // ========================================================================
     let selectedProduct = { name: '', price: 0, driveUrl: '' };
 
-    // Buka Modal Checkout Produk Berbayar
+    function renderApps() {
+      const appGrid = document.getElementById('appGrid');
+      appGrid.innerHTML = '';
+
+      daftarAplikasi.forEach(app => {
+        const isFree = app.type === 'free';
+        
+        // Template List Fitur
+        const fiturList = app.fitur.map(f => 
+          `<li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400"></i> ${f}</li>`
+        ).join('');
+
+        // Card HTML
+        const cardHTML = `
+          <div class="app-card ${app.type} group relative bg-slate-900/60 border border-slate-800 hover:border-indigo-500/50 rounded-3xl p-7 transition-all duration-300 hover:shadow-2xl hover:shadow-indigo-500/10 flex flex-col justify-between backdrop-blur-xl hover:-translate-y-1">
+            <div>
+              <div class="flex items-center justify-between mb-6">
+                <div class="w-14 h-14 ${isFree ? 'bg-emerald-500/10 text-emerald-400 border-emerald-500/20' : 'bg-indigo-500/10 text-indigo-400 border-indigo-500/20'} border rounded-2xl flex items-center justify-center text-2xl shadow-inner">
+                  <i class="fa-solid ${app.icon}"></i>
+                </div>
+                <span class="text-[10px] font-bold uppercase tracking-wider ${isFree ? 'bg-emerald-500/10 text-emerald-400 border-emerald-500/20' : 'bg-indigo-500/10 text-indigo-400 border-indigo-500/20'} border px-3 py-1 rounded-full flex items-center gap-1">
+                  <i class="fa-solid ${isFree ? 'fa-gift' : 'fa-lock'} text-[9px]"></i> ${isFree ? 'Free Edition' : 'Premium'}
+                </span>
+              </div>
+              <h3 class="app-title text-2xl font-bold text-white mb-2 group-hover:text-indigo-300 transition-colors">
+                ${app.nama}
+              </h3>
+              <p class="text-slate-400 text-sm leading-relaxed mb-6">
+                ${app.deskripsi}
+              </p>
+              <ul class="space-y-2 text-xs text-slate-300 mb-6 border-t border-slate-800/80 pt-4">
+                ${fiturList}
+              </ul>
+            </div>
+            <div class="border-t border-slate-800/80 pt-5">
+              <div class="flex items-baseline justify-between mb-4">
+                <span class="text-xs text-slate-400 font-medium">Harga</span>
+                ${isFree ? 
+                  `<span class="text-2xl font-extrabold text-emerald-400">GRATIS</span>` : 
+                  `<div class="flex items-baseline gap-1">
+                    <span class="text-xs text-indigo-400 font-semibold">Rp</span>
+                    <span class="text-3xl font-extrabold text-white">${app.harga.toLocaleString('id-ID')}</span>
+                   </div>`
+                }
+              </div>
+              ${isFree ? 
+                `<a href="${app.driveUrl}" target="_blank"
+                    class="w-full bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-3.5 px-4 rounded-2xl shadow-lg shadow-emerald-600/30 transition-all flex items-center justify-center gap-2 text-sm">
+                  <i class="fa-solid fa-download"></i> Download Gratis Instan
+                 </a>` :
+                `<button onclick="buyProduct('${app.nama}', ${app.harga}, '${app.driveUrl}')" 
+                        class="w-full bg-gradient-to-r from-indigo-600 to-violet-600 hover:from-indigo-500 hover:to-violet-500 text-white font-bold py-3.5 px-4 rounded-2xl shadow-lg shadow-indigo-600/30 transition-all flex items-center justify-center gap-2 text-sm">
+                  <i class="fa-solid fa-bolt text-amber-300"></i> Beli Aplikasi Ini
+                 </button>`
+              }
+            </div>
+          </div>
+        `;
+        appGrid.innerHTML += cardHTML;
+      });
+    }
+
+    // Jalankan render saat halaman pertama kali dibuka
+    renderApps();
+
+    // Fungsi Checkout & Filter
     function buyProduct(name, price, driveUrl) {
       selectedProduct = { name, price, driveUrl };
       document.getElementById('modalProductName').innerText = `${name} — Rp ${price.toLocaleString('id-ID')}`;
@@ -320,7 +290,6 @@
       document.getElementById('checkoutModal').classList.add('hidden');
     }
 
-    // Filter Kategori (Semua / Berbayar / Gratis)
     function filterApp(category) {
       const cards = document.querySelectorAll('.app-card');
       const buttons = document.querySelectorAll('.filter-btn');
@@ -349,7 +318,6 @@
       });
     }
 
-    // Live Search Nama Aplikasi
     function searchApps() {
       const query = document.getElementById('searchInput').value.toLowerCase();
       const cards = document.querySelectorAll('.app-card');
@@ -364,7 +332,6 @@
       });
     }
 
-    // Proses Checkout via Backend Vercel -> Midtrans
     async function handleCheckout(event) {
       event.preventDefault();
       
@@ -397,7 +364,7 @@
               window.location.href = selectedProduct.driveUrl; 
             },
             onPending: function(result) {
-              alert('Menunggu pembayaran Anda. Selesaikan instruksi di layar.');
+              alert('Menunggu pembayaran Anda.');
             },
             onError: function(result) {
               alert('Pembayaran gagal atau dibatalkan.');
