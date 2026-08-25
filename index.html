@@ -3,132 +3,318 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Zeeo Software Market — Official Vektor Zero Store</title>
+  <title>Zeeo Software Market — Official Software Ecosystem</title>
+  
+  <!-- Tailwind CSS & Google Fonts -->
   <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-</head>
-<body class="bg-gray-950 text-gray-100 font-sans antialiased min-h-screen flex flex-col justify-between">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
 
-  <!-- Header / Navbar -->
-  <nav class="border-b border-gray-800 bg-gray-900/60 backdrop-blur-md sticky top-0 z-50">
-    <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
-      <div class="flex items-center gap-3">
-        <div class="bg-gradient-to-tr from-blue-600 to-indigo-600 p-2.5 rounded-xl text-white shadow-lg shadow-blue-500/20">
-          <i class="fa-solid fa-code text-xl"></i>
+  <!-- Midtrans Snap SDK (Otomatis beralih antara Sandbox/Production tergantung domain) -->
+  <script type="text/javascript" src="https://app.sandbox.midtrans.com/snap/snap.js" data-client-key="YOUR_CLIENT_KEY"></script>
+
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Plus Jakarta Sans', 'sans-serif'] },
+          colors: {
+            brand: { 50: '#eff6ff', 500: '#3b82f6', 600: '#2563eb', 700: '#1d4ed8', 900: '#1e3a8a' }
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-[#090D16] text-slate-100 font-sans antialiased min-h-screen flex flex-col justify-between selection:bg-blue-500 selection:text-white">
+
+  <!-- Navbar -->
+  <header class="border-b border-slate-800/80 bg-[#090D16]/80 backdrop-blur-xl sticky top-0 z-40">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      <div class="flex items-center gap-4">
+        <div class="h-11 w-11 rounded-2xl bg-gradient-to-tr from-blue-600 to-indigo-500 flex items-center justify-center text-white shadow-lg shadow-blue-500/25 ring-1 ring-white/20">
+          <i class="fa-solid fa-cube text-xl"></i>
         </div>
         <div>
-          <span class="text-xl font-black tracking-wider text-white">ZEEO<span class="text-blue-500"> MARKET</span></span>
-          <span class="block text-[10px] text-gray-400 tracking-widest font-mono uppercase">Vektor Zero Ecosystem</span>
+          <div class="flex items-center gap-2">
+            <span class="text-xl font-extrabold tracking-tight text-white">ZEEO<span class="text-blue-500">MARKET</span></span>
+            <span class="text-[10px] bg-blue-500/10 text-blue-400 font-bold px-2 py-0.5 rounded-md border border-blue-500/20">v2.0</span>
+          </div>
+          <span class="block text-xs text-slate-400 font-medium">Vektor Zero Ecosystem</span>
         </div>
       </div>
-      <div class="text-xs text-gray-400 flex items-center gap-2 bg-gray-900 border border-gray-800 px-3 py-1.5 rounded-full">
-        <i class="fa-solid fa-shield-halved text-emerald-400"></i>
-        <span>Official Verified Store</span>
+
+      <div class="flex items-center gap-3">
+        <div class="hidden sm:flex items-center gap-2 px-3 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-semibold">
+          <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+          Sistem Pembayaran Automatis Aktif
+        </div>
       </div>
     </div>
-  </nav>
+  </header>
 
-  <!-- Main Content -->
-  <main class="max-w-6xl mx-auto px-4 py-12 w-full">
-    <!-- Hero Banner -->
-    <div class="mb-12 text-center max-w-2xl mx-auto">
-      <div class="inline-block bg-blue-500/10 border border-blue-500/20 text-blue-400 text-xs px-3 py-1 rounded-full font-semibold mb-3">
-        ⚡ PAY-PER-DOWNLOAD SYSTEM
+  <!-- Hero Section -->
+  <section class="relative overflow-hidden py-16 lg:py-20 border-b border-slate-800/50">
+    <div class="absolute inset-0 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(59,130,246,0.15),rgba(255,255,255,0))]"></div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+      <span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-slate-900 border border-slate-800 text-slate-300 text-xs font-semibold mb-6 shadow-inner">
+        <i class="fa-solid fa-bolt text-amber-400"></i> INSTANT DIGITAL DELIVERY
+      </span>
+      <h1 class="text-4xl sm:text-6xl font-extrabold tracking-tight text-white mb-6 leading-tight">
+        Lisensi Software Resmi & <br><span class="bg-gradient-to-r from-blue-400 via-indigo-300 to-emerald-400 bg-clip-text text-transparent">Pembayaran Instan Otomatis</span>
+      </h1>
+      <p class="text-slate-400 text-base sm:text-lg max-w-2xl mx-auto mb-10 leading-relaxed">
+        Dapatkan lisensi produk software karya Zeeo secara instan. Bayar via QRIS (GoPay, OVO, Dana) atau Transfer Bank — link download langsung terbuka otomatis.
+      </p>
+
+      <!-- Search & Filter Controls -->
+      <div class="max-w-xl mx-auto flex flex-col sm:flex-row gap-3">
+        <div class="relative flex-1">
+          <i class="fa-solid fa-magnifying-glass absolute left-4 top-1/2 -translate-y-1/2 text-slate-500"></i>
+          <input type="text" id="search-input" onkeyup="filterApp()" placeholder="Cari nama aplikasi..." class="w-full bg-slate-900/90 border border-slate-800 rounded-xl pl-11 pr-4 py-3.5 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition">
+        </div>
+        <select id="category-filter" onchange="filterApp()" class="bg-slate-900/90 border border-slate-800 rounded-xl px-4 py-3.5 text-sm text-slate-300 focus:outline-none focus:border-blue-500 transition">
+          <option value="ALL">Semua Platform</option>
+          <option value="Windows">Windows</option>
+          <option value="Android">Android (APK)</option>
+        </select>
       </div>
-      <h1 class="text-3xl md:text-5xl font-black mb-4 tracking-tight">Zeeo Software Market</h1>
-      <p class="text-gray-400 text-sm md:text-base">Katalog resmi software & aplikasi karya Zeeo. Sekali bayar, dapatkan akses penuh selamanya.</p>
+    </div>
+  </section>
+
+  <!-- Product Catalog Grid -->
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 w-full flex-1">
+    <div class="flex items-center justify-between mb-8">
+      <div>
+        <h2 class="text-2xl font-bold text-white">Katalog Software</h2>
+        <p class="text-sm text-slate-400">Pilih aplikasi yang Anda butuhkan di bawah ini.</p>
+      </div>
+      <span id="app-count" class="text-xs font-semibold text-slate-400 bg-slate-900 px-3 py-1.5 rounded-lg border border-slate-800">3 Aplikasi Tersedia</span>
     </div>
 
-    <!-- Product Grid (Daftar Aplikasi Otomatis Muncul di Sini) -->
-    <div id="app-container" class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-      <!-- Card aplikasi akan di-generate otomatis oleh JavaScript -->
+    <div id="app-grid" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      <!-- Container Kartu Aplikasi Dinamis -->
     </div>
   </main>
 
+  <!-- Modal Checkout -->
+  <div id="checkout-modal" class="fixed inset-0 bg-black/80 backdrop-blur-md hidden flex items-center justify-center p-4 z-50">
+    <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6 sm:p-8 max-w-lg w-full shadow-2xl relative transform transition-all">
+      <button onclick="closeModal()" class="absolute top-5 right-5 text-slate-400 hover:text-white transition">
+        <i class="fa-solid fa-xmark text-xl"></i>
+      </button>
+
+      <div class="flex items-center gap-3 mb-4">
+        <div class="p-3 bg-blue-500/10 text-blue-400 rounded-xl border border-blue-500/20">
+          <i class="fa-solid fa-cart-shopping text-lg"></i>
+        </div>
+        <div>
+          <h3 class="text-lg font-bold text-white" id="modal-app-title">Detail Pembelian</h3>
+          <span class="text-xs text-slate-400" id="modal-app-version">v1.0.0</span>
+        </div>
+      </div>
+
+      <div class="bg-slate-950 p-4 rounded-xl border border-slate-800/80 mb-6 space-y-3">
+        <div class="flex justify-between text-sm">
+          <span class="text-slate-400">Item:</span>
+          <span class="text-white font-semibold" id="modal-item-name">-</span>
+        </div>
+        <div class="flex justify-between text-sm">
+          <span class="text-slate-400">Metode Bayar:</span>
+          <span class="text-emerald-400 font-semibold">QRIS / E-Wallet / Bank</span>
+        </div>
+        <div class="border-t border-slate-800 pt-3 flex justify-between items-center">
+          <span class="text-sm text-slate-400">Total Tagihan:</span>
+          <span class="text-xl font-extrabold text-white" id="modal-app-price">Rp 0</span>
+        </div>
+      </div>
+
+      <div class="mb-6">
+        <label class="block text-xs font-semibold text-slate-400 mb-2">Email Penerima Lisensi & Notifikasi:</label>
+        <input type="email" id="customer-email" placeholder="nama@email.com" class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-blue-500">
+      </div>
+
+      <button id="btn-pay-action" onclick="executePayment()" class="w-full bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white font-bold py-3.5 rounded-xl shadow-lg shadow-blue-500/20 transition flex items-center justify-center gap-2">
+        <i class="fa-solid fa-lock text-sm"></i> Bayar Sekarang (Otomatis)
+      </button>
+    </div>
+  </div>
+
   <!-- Footer -->
-  <footer class="border-t border-gray-800/80 bg-gray-900/30 py-8 text-center">
-    <p class="text-xs text-gray-500">© 2026 Zeeo Software Market. Powered by <span class="text-gray-300 font-semibold">Vektor Zero</span>.</p>
+  <footer class="border-t border-slate-800/80 bg-[#060911] py-10">
+    <div class="max-w-7xl mx-auto px-4 text-center">
+      <p class="text-xs text-slate-500">© 2026 Zeeo Software Market. Ecosystem by <span class="text-slate-300 font-bold">Vektor Zero</span>. Integrated with Midtrans Payment Gateway.</p>
+    </div>
   </footer>
 
   <script>
-    // =========================================================================
-    // DAFTAR APLIKASI ANDA (Tambahkan / Edit Aplikasi Anda di Sini)
-    // =========================================================================
-    const daftarAplikasi = [
+    // DATA KATALOG UTAMA APLIKASI
+    const dataAplikasi = [
       {
-        id: "app-1",
+        id: "zeeo-pos-kasir",
         nama: "Zeeo POS Kasir Pro",
-        versi: "v1.2.0 • Windows",
+        platform: "Windows",
+        versi: "v1.2.0",
         harga: 50000,
-        deskripsi: "Aplikasi kasir dan manajemen stok barang lengkap tanpa biaya langganan bulanan.",
-        linkDownload: "https://drive.google.com/file/d/LINK_GOOGLE_DRIVE_1/view"
+        deskripsi: "Sistem kasir desktop lengkap dengan fitur manajemen stok, cetak struk thermal, dan laporan penjualan bulanan.",
+        linkDownload: "https://drive.google.com/file/d/LINK_DRIVE_1/view?usp=sharing"
       },
       {
-        id: "app-2",
-        nama: "Vektor Auto Whatsapp",
-        versi: "v2.0.1 • Windows",
+        id: "vektor-auto-wa",
+        nama: "Vektor Auto Whatsapp Tool",
+        platform: "Windows",
+        versi: "v2.0.1",
         harga: 75000,
-        deskripsi: "Tool pengirim pesan promosi otomatis untuk kebutuhan marketing & bisnis.",
-        linkDownload: "https://drive.google.com/file/d/LINK_GOOGLE_DRIVE_2/view"
+        deskripsi: "Aplikasi pengirim pesan promosi otomatis untuk kebutuhan broadcast marketing secara cepat dan aman.",
+        linkDownload: "https://drive.google.com/file/d/LINK_DRIVE_2/view?usp=sharing"
       },
       {
-        id: "app-3",
-        nama: "Zeeo File Encryption Tool",
-        versi: "v1.0.0 • Android / APK",
+        id: "zeeo-file-encrypt",
+        nama: "Zeeo Encryptor Mobile",
+        platform: "Android",
+        versi: "v1.0.5",
         harga: 35000,
-        deskripsi: "Aplikasi pengaman dan pembuat enkripsi file rahasia dengan standar Vektor Zero.",
-        linkDownload: "https://drive.google.com/file/d/LINK_GOOGLE_DRIVE_3/view"
+        deskripsi: "Aplikasi pengaman file rahasia dengan standar algoritma enkripsi Vektor Zero untuk smartphone Android.",
+        linkDownload: "https://drive.google.com/file/d/LINK_DRIVE_3/view?usp=sharing"
       }
     ];
 
-    // =========================================================================
-    // FUNGSI UNTUK MENAMPILKAN SEMUA APLIKASI SECARA OTOMATIS
-    // =========================================================================
-    function tampilkanKatalog() {
-      const container = document.getElementById('app-container');
-      container.innerHTML = '';
+    let activeSelectedApp = null;
 
-      daftarAplikasi.forEach(app => {
-        const hargaFormatted = new Intl.NumberFormat('id-ID', { style: 'currency', currency: 'IDR', maximumFractionDigits: 0 }).format(app.harga);
+    function renderKatalog(items) {
+      const grid = document.getElementById('app-grid');
+      grid.innerHTML = '';
+
+      if (items.length === 0) {
+        grid.innerHTML = `<div class="col-span-full text-center py-12 text-slate-500">Aplikasi tidak ditemukan.</div>`;
+        return;
+      }
+
+      items.forEach(app => {
+        const hargaFmt = new Intl.NumberFormat('id-ID', { style: 'currency', currency: 'IDR', maximumFractionDigits: 0 }).format(app.harga);
         
-        const cardHTML = `
-          <div class="bg-gray-900/80 border border-gray-800 rounded-2xl p-6 shadow-xl hover:border-blue-500/40 transition-all flex flex-col justify-between">
+        const card = `
+          <div class="bg-slate-900/60 border border-slate-800/80 hover:border-blue-500/50 rounded-2xl p-6 flex flex-col justify-between transition-all duration-300 hover:shadow-2xl hover:shadow-blue-500/10 group">
             <div>
               <div class="flex items-start justify-between gap-3 mb-4">
-                <div>
-                  <h3 class="text-lg font-bold text-white">${app.nama}</h3>
-                  <span class="text-xs bg-blue-500/10 text-blue-400 px-2.5 py-0.5 rounded-full font-medium inline-block mt-1">${app.versi}</span>
+                <div class="h-12 w-12 rounded-xl bg-slate-800 border border-slate-700/50 flex items-center justify-center text-blue-400 group-hover:bg-blue-600 group-hover:text-white transition">
+                  <i class="fa-solid ${app.platform === 'Windows' ? 'fa-desktop' : 'fa-mobile-screen-button'} text-xl"></i>
                 </div>
-                <div class="text-right">
-                  <div class="text-lg font-extrabold text-emerald-400">${hargaFormatted}</div>
-                </div>
+                <span class="text-xs bg-slate-800 text-slate-300 px-2.5 py-1 rounded-md border border-slate-700 font-mono">${app.platform}</span>
               </div>
-              <p class="text-gray-400 text-sm mb-6">${app.deskripsi}</p>
+              <h3 class="text-lg font-bold text-white mb-1">${app.nama}</h3>
+              <span class="text-xs text-blue-400 font-medium block mb-3">${app.versi}</span>
+              <p class="text-slate-400 text-sm leading-relaxed mb-6">${app.deskripsi}</p>
             </div>
 
-            <div class="pt-4 border-t border-gray-800/80 flex items-center justify-between">
-              <span class="text-xs text-gray-500 font-mono">Dev: Vektor Zero</span>
-              <button onclick="prosesPembayaran('${app.nama}', ${app.harga}, '${app.linkDownload}')" class="bg-blue-600 hover:bg-blue-500 text-white font-semibold text-xs md:text-sm px-4 py-2.5 rounded-xl shadow-lg shadow-blue-600/20 transition active:scale-95">
-                Beli & Download
+            <div class="pt-4 border-t border-slate-800/80 flex items-center justify-between">
+              <div>
+                <span class="block text-[10px] text-slate-500 uppercase tracking-wider font-semibold">Harga Lisensi</span>
+                <span class="text-lg font-extrabold text-emerald-400">${hargaFmt}</span>
+              </div>
+              <button onclick="openCheckoutModal('${app.id}')" class="bg-blue-600 hover:bg-blue-500 text-white font-semibold text-xs px-4 py-2.5 rounded-xl transition shadow-lg shadow-blue-600/20 active:scale-95 flex items-center gap-2">
+                <i class="fa-solid fa-cart-shopping"></i> Beli Sekarang
               </button>
             </div>
           </div>
         `;
-        container.innerHTML += cardHTML;
+        grid.innerHTML += card;
       });
+
+      document.getElementById('app-count').innerText = `${items.length} Aplikasi Tersedia`;
     }
 
-    // Fungsi Pembayaran & Unduh
-    function prosesPembayaran(namaApp, harga, linkDownload) {
-      alert("Proses Pembayaran untuk: " + namaApp + "\nHarga: Rp " + harga.toLocaleString('id-ID'));
-      let konfirmasi = confirm("Simulasi Pembayaran Berhasil!\nApakah Anda ingin langsung mengunduh file " + namaApp + "?");
-      if (konfirmasi) {
-        window.location.href = linkDownload;
+    function filterApp() {
+      const query = document.getElementById('search-input').value.toLowerCase();
+      const cat = document.getElementById('category-filter').value;
+
+      const filtered = dataAplikasi.filter(app => {
+        const matchQuery = app.nama.toLowerCase().includes(query) || app.deskripsi.toLowerCase().includes(query);
+        const matchCat = cat === 'ALL' || app.platform === cat;
+        return matchQuery && matchCat;
+      });
+
+      renderKatalog(filtered);
+    }
+
+    function openCheckoutModal(appId) {
+      activeSelectedApp = dataAplikasi.find(a => a.id === appId);
+      if(!activeSelectedApp) return;
+
+      document.getElementById('modal-app-title').innerText = activeSelectedApp.nama;
+      document.getElementById('modal-app-version').innerText = activeSelectedApp.versi;
+      document.getElementById('modal-item-name').innerText = activeSelectedApp.nama;
+      document.getElementById('modal-app-price').innerText = new Intl.NumberFormat('id-ID', { style: 'currency', currency: 'IDR', maximumFractionDigits: 0 }).format(activeSelectedApp.harga);
+
+      document.getElementById('checkout-modal').classList.remove('hidden');
+    }
+
+    function closeModal() {
+      document.getElementById('checkout-modal').classList.add('hidden');
+    }
+
+    async function executePayment() {
+      if (!activeSelectedApp) return;
+
+      const email = document.getElementById('customer-email').value;
+      if (!email) {
+        alert('Silakan masukkan alamat email Anda untuk penerimaan lisensi.');
+        return;
+      }
+
+      const btn = document.getElementById('btn-pay-action');
+      btn.disabled = true;
+      btn.innerHTML = `<i class="fa-solid fa-spinner animate-spin"></i> Memproses Invoice...`;
+
+      try {
+        const response = await fetch('/api/create-transaction', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            appId: activeSelectedApp.id,
+            appName: activeSelectedApp.nama,
+            appPrice: activeSelectedApp.harga,
+            customerEmail: email
+          })
+        });
+
+        const data = await response.json();
+
+        if (data.token) {
+          closeModal();
+          // Panggil Midtrans Snap Popup Resmi
+          window.snap.pay(data.token, {
+            onSuccess: function(result) {
+              alert("✅ PEMBAYARAN BERHASIL!\n\nSistem memverifikasi pembayaran Anda secara otomatis. Mengunduh aplikasi...");
+              window.location.href = activeSelectedApp.linkDownload;
+            },
+            onPending: function(result) {
+              alert("Menunggu pembayaran diselesaikan. Silakan cek QRIS / Instruksi bank Anda.");
+            },
+            onError: function(result) {
+              alert("Pembayaran gagal atau dibatalkan.");
+            },
+            onClose: function() {
+              alert("Popup pembayaran ditutup sebelum transaksi selesai.");
+            }
+          });
+        } else {
+          alert("Gagal membuat transaksi: " + (data.message || "Pastikan kunci API Midtrans sudah dikonfigurasi di Vercel."));
+        }
+      } catch (err) {
+        console.error(err);
+        alert("Terjadi kesalahan jaringan atau server.");
+      } finally {
+        btn.disabled = false;
+        btn.innerHTML = `<i class="fa-solid fa-lock text-sm"></i> Bayar Sekarang (Otomatis)`;
       }
     }
 
-    // Jalankan fungsi saat web dibuka
-    tampilkanKatalog();
+    // Inisialisasi awal
+    renderKatalog(dataAplikasi);
   </script>
 </body>
 </html>
