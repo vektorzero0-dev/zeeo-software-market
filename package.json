@@ -1,0 +1,8 @@
+{
+  "name": "zeeo-software-market",
+  "version": "2.0.0",
+  "private": true,
+  "dependencies": {
+    "midtrans-client": "^1.4.2"
+  }
+}
