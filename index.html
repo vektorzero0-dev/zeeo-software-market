@@ -36,40 +36,12 @@
         ⚡ PAY-PER-DOWNLOAD SYSTEM
       </div>
       <h1 class="text-3xl md:text-5xl font-black mb-4 tracking-tight">Zeeo Software Market</h1>
-      <p class="text-gray-400 text-sm md:text-base">Dapatkan lisensi resmi aplikasi karya Zeeo secara instan. Sekali bayar, bebas akses semua fitur selamanya.</p>
+      <p class="text-gray-400 text-sm md:text-base">Katalog resmi software & aplikasi karya Zeeo. Sekali bayar, dapatkan akses penuh selamanya.</p>
     </div>
 
-    <!-- Product Grid -->
-    <div class="grid md:grid-cols-2 gap-8">
-      
-      <!-- Card Aplikasi 1 -->
-      <div class="bg-gray-900/80 border border-gray-800 rounded-2xl p-6 shadow-xl hover:border-blue-500/40 transition-all flex flex-col justify-between">
-        <div>
-          <div class="flex items-start justify-between gap-4 mb-4">
-            <div class="flex items-center gap-3">
-              <div class="w-12 h-12 bg-gray-800 border border-gray-700 rounded-xl flex items-center justify-center font-black text-blue-400 text-lg">
-                VZ
-              </div>
-              <div>
-                <h3 class="text-lg font-bold">Aplikasi Pertama Zeeo</h3>
-                <span class="text-xs bg-blue-500/10 text-blue-400 px-2.5 py-0.5 rounded-full font-medium">Windows / Android</span>
-              </div>
-            </div>
-            <div class="text-right">
-              <div class="text-xl font-extrabold text-emerald-400">Rp 50.000</div>
-            </div>
-          </div>
-          <p class="text-gray-400 text-sm mb-6">Penjelasan singkat keunggulan aplikasi Anda. Bebas diakses penuh setelah pembayaran berhasil.</p>
-        </div>
-
-        <div class="pt-4 border-t border-gray-800/80 flex items-center justify-between">
-          <span class="text-xs text-gray-500 font-mono">Dev: Vektor Zero</span>
-          <button onclick="prosesSimulasiBeli('https://drive.google.com')" class="bg-blue-600 hover:bg-blue-500 text-white font-semibold text-sm px-5 py-2.5 rounded-xl shadow-lg shadow-blue-600/20 transition active:scale-95">
-            Beli & Download
-          </button>
-        </div>
-      </div>
-
+    <!-- Product Grid (Daftar Aplikasi Otomatis Muncul di Sini) -->
+    <div id="app-container" class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <!-- Card aplikasi akan di-generate otomatis oleh JavaScript -->
     </div>
   </main>
 
@@ -79,13 +51,84 @@
   </footer>
 
   <script>
-    function prosesSimulasiBeli(linkDownload) {
-      alert("Simulasi Pembayaran Zeeo Software Market");
-      let konfirmasi = confirm("Apakah Anda ingin langsung mengunduh file aplikasi?");
+    // =========================================================================
+    // DAFTAR APLIKASI ANDA (Tambahkan / Edit Aplikasi Anda di Sini)
+    // =========================================================================
+    const daftarAplikasi = [
+      {
+        id: "app-1",
+        nama: "Zeeo POS Kasir Pro",
+        versi: "v1.2.0 • Windows",
+        harga: 50000,
+        deskripsi: "Aplikasi kasir dan manajemen stok barang lengkap tanpa biaya langganan bulanan.",
+        linkDownload: "https://drive.google.com/file/d/LINK_GOOGLE_DRIVE_1/view"
+      },
+      {
+        id: "app-2",
+        nama: "Vektor Auto Whatsapp",
+        versi: "v2.0.1 • Windows",
+        harga: 75000,
+        deskripsi: "Tool pengirim pesan promosi otomatis untuk kebutuhan marketing & bisnis.",
+        linkDownload: "https://drive.google.com/file/d/LINK_GOOGLE_DRIVE_2/view"
+      },
+      {
+        id: "app-3",
+        nama: "Zeeo File Encryption Tool",
+        versi: "v1.0.0 • Android / APK",
+        harga: 35000,
+        deskripsi: "Aplikasi pengaman dan pembuat enkripsi file rahasia dengan standar Vektor Zero.",
+        linkDownload: "https://drive.google.com/file/d/LINK_GOOGLE_DRIVE_3/view"
+      }
+    ];
+
+    // =========================================================================
+    // FUNGSI UNTUK MENAMPILKAN SEMUA APLIKASI SECARA OTOMATIS
+    // =========================================================================
+    function tampilkanKatalog() {
+      const container = document.getElementById('app-container');
+      container.innerHTML = '';
+
+      daftarAplikasi.forEach(app => {
+        const hargaFormatted = new Intl.NumberFormat('id-ID', { style: 'currency', currency: 'IDR', maximumFractionDigits: 0 }).format(app.harga);
+        
+        const cardHTML = `
+          <div class="bg-gray-900/80 border border-gray-800 rounded-2xl p-6 shadow-xl hover:border-blue-500/40 transition-all flex flex-col justify-between">
+            <div>
+              <div class="flex items-start justify-between gap-3 mb-4">
+                <div>
+                  <h3 class="text-lg font-bold text-white">${app.nama}</h3>
+                  <span class="text-xs bg-blue-500/10 text-blue-400 px-2.5 py-0.5 rounded-full font-medium inline-block mt-1">${app.versi}</span>
+                </div>
+                <div class="text-right">
+                  <div class="text-lg font-extrabold text-emerald-400">${hargaFormatted}</div>
+                </div>
+              </div>
+              <p class="text-gray-400 text-sm mb-6">${app.deskripsi}</p>
+            </div>
+
+            <div class="pt-4 border-t border-gray-800/80 flex items-center justify-between">
+              <span class="text-xs text-gray-500 font-mono">Dev: Vektor Zero</span>
+              <button onclick="prosesPembayaran('${app.nama}', ${app.harga}, '${app.linkDownload}')" class="bg-blue-600 hover:bg-blue-500 text-white font-semibold text-xs md:text-sm px-4 py-2.5 rounded-xl shadow-lg shadow-blue-600/20 transition active:scale-95">
+                Beli & Download
+              </button>
+            </div>
+          </div>
+        `;
+        container.innerHTML += cardHTML;
+      });
+    }
+
+    // Fungsi Pembayaran & Unduh
+    function prosesPembayaran(namaApp, harga, linkDownload) {
+      alert("Proses Pembayaran untuk: " + namaApp + "\nHarga: Rp " + harga.toLocaleString('id-ID'));
+      let konfirmasi = confirm("Simulasi Pembayaran Berhasil!\nApakah Anda ingin langsung mengunduh file " + namaApp + "?");
       if (konfirmasi) {
         window.location.href = linkDownload;
       }
     }
+
+    // Jalankan fungsi saat web dibuka
+    tampilkanKatalog();
   </script>
 </body>
 </html>
